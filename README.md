@@ -1,6 +1,14 @@
 # GradeSync — Student Grade Management & Analytics System
 
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
 GradeSync is a multi-backend, multi-interface student grade management system developed during my software internship at **IBaseIT**. The project serves as an architectural demonstration of various data persistence strategies (ranging from transient in-memory lists to structured MySQL schemas) exposed via both command-line interfaces (CLI) and responsive web dashboards.
+
 
 ---
 
