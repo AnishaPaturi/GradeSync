@@ -13,10 +13,12 @@ def log(str1):
         f.write(f"{str1} at {current_time} on {current_date}\n")
 
 # Database credentials
-host = "localhost"
-user = "root"
-password = "Arush_09"
-database = "student_management"
+import os
+host = os.environ.get("DB_HOST", "localhost")
+user = os.environ.get("DB_USER", "root")
+password = os.environ.get("DB_PASSWORD", "Arush_09")
+database = os.environ.get("DB_NAME", "student_management")
+db_port = int(os.environ.get("DB_PORT", 3306))
 
 # Establish database connection
 def connect_to_db():
@@ -25,7 +27,8 @@ def connect_to_db():
             host=host,
             user=user,
             password=password,
-            database=database
+            database=database,
+            port=db_port
         )
         if connection.is_connected():
             print("Successfully connected to the database")
@@ -34,6 +37,7 @@ def connect_to_db():
     except Error as e:
         print(f"Error: {e}")
     return None
+
 
 # Define the request handler
 class RequestHandler(BaseHTTPRequestHandler):
@@ -202,14 +206,13 @@ class RequestHandler(BaseHTTPRequestHandler):
 
 # Set up and start the server
 def run_server():
-    host = 'localhost'
-    port = 8080
+    host = '0.0.0.0'
+    port = int(os.environ.get("PORT", 8080))
     # Create an instance of HTTPServer with our handler class
     server = HTTPServer((host, port), RequestHandler)
-    '''server_address = ('localhost', 8080)
-    httpd = HTTPServer(server_address, RequestHandler)'''
     print(f"Server started at http://{host}:{port}")
     server.serve_forever()
+
 
 if __name__ == "__main__":
     run_server()
