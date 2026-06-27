@@ -1,0 +1,16 @@
+# Logs and runtime databases
+Log.txt
+Log-server.txt
+Log
+studentmanagement.txt
+students.json
+
+# Experimental and Scratch files (to keep the repo clean)
+client.py
+datetime_code.py
+login.py
+sample.py
+server.py
+server1.py
+server_base.py
+yash_code.py

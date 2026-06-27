@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GradeSync - A high-performance student grade management and analytics dashboard supporting transient memory, flat file, JSON, and MySQL databases.">
+  <meta name="keywords" content="GradeSync, student management system, grade tracker, PHP, Python, MySQL, HTML, CSS, JavaScript, OOP, JSON, database persistence">
+  <title>GradeSync - Student Management System</title>
+  <link rel="stylesheet" href="studentmanagement.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GradeSync</h1>
+      <p>A high-performance Grade Management & Analytics Dashboard</p>
+    </header>
+
+    <div class="dashboard-grid">
+      <!-- Card 1: Add Student -->
+      <div class="card" id="add-student">
+        <h2>Add Student Record</h2>
+        <form id="add-student-form">
+          <div class="form-group">
+            <label for="name">Student Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter student's full name" required>
+          </div>
+          <div class="form-group">
+            <label for="grade">Grade (0 - 100)</label>
+            <input type="number" id="grade" name="grade" min="0" max="100" placeholder="Enter grade (e.g. 95)" required>
+          </div>
+          <button id="add-student-btn" type="submit">Add Student</button>
+        </form>
+        <p id="add-student-result"></p>
+      </div>
+
+      <!-- Card 2: Display Students -->
+      <div class="card" id="display-students">
+        <h2>Student Registry</h2>
+        <button id="display-students-btn" style="margin-bottom: 20px;">Fetch Registry Records</button>
+        <ul id="students-list"></ul>
+      </div>
+
+      <!-- Card 3: Class Average -->
+      <div class="card" id="class-average">
+        <h2>Class Analytics</h2>
+        <button id="class-average-btn" style="margin-bottom: 20px;">Calculate Average</button>
+        <p id="class-average-result"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="studentmanagement.js"></script>
+</body>
+</html>
